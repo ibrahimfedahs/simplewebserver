@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date:16-02-2024
+## Date: 06/10/2023
 
 ## AIM:
 To develop a simple webserver to serve html pages.
@@ -26,58 +26,44 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <!DOCTYPE html>
 <html>
-<head>
-<title>Top Software companies with revenue table</title>
-</head>
-<body bgcolor="aquamarine">
-<table bgcolor="aqua" border="5" cellspacing="6" cellpadding="10" align="center" >
-<caption>TOP FIVE REVENUE GENERATING SOFTWARE COMPANIES</caption>
-	<tr bgcolor="lawngreen">
-		<th>Rank</th>
-		<th>Company</th>
-		<th>Sales</th>
-		<th>Naionality</th>
-	</tr>
-	
-	<tr bgcolor="pink">
-		<td>1</td>
-		<td>Microsoft</td>
-		<td>57.9</td>
-		<td>USA</td>
-	</tr>
+	<title> Revenue chart </title>
+	<body>
+		<table border="2" cellspacing="2" cellpadding="3">
+			<caption> Top five highest revenue generating software companies </caption>
+				<tr>
+					<td> Serial Number </td>
+					<td> Companies </td>
+					<td> Revenue Generated </td>
+				</tr>
+				<tr>
+					<td> 1, </td>
+					<td> Microsoft </td>
+					<td> $203.08 billion </td>
+				</tr>
+				<tr>
+					<td> 2, </td>
+					<td> Oracle </td>
+					<td> $46.07 billion </td>
+				</tr>
+				<tr>
+					<td> 3, </td>
+					<td> SAP </td>
+					<td> $32.97 billion </td>
+				</tr>		
+				<tr>
+					<td> 4, </td>
+					<td> Salesforce </td>
+					<td> $30.29 billion </td>
+				</tr>
+				<tr>
+					<td> 5, </td>
+					<td> Adobe </td>
+					<td> $17.61 billion </td>
+				</tr>
 
-	<tr bgcolor="pink">
-		<td>2</td>
-		<td>Oracle</td>
-		<td>21.0</td>
-		<td>USA</td>
-	</tr>
-
-	<tr bgcolor="pink">
-		<td>3</td>
-		<td>SAP</td>
-		<td>16.1</td>
-		<td>Germany</td>
-	</tr>
-	
-	<tr bgcolor="pink">
-		<td>4</td>
-		<td>Computer Associates</td>
-		<td>4.1</td>
-		<td>USA</td>
-	</tr>
-
-	<tr bgcolor="pink">
-		<td>5</td>
-		<td>Adobe</td>
-		<td>3.4</td>
-		<td>USA</td>
-	</tr>
-</table>
-</body>
+		</table> 
+	</body>
 </html>
-
-
 """
 class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -90,11 +76,11 @@ server_address = ('',8000)
 httpd = HTTPServer(server_address,myhandler)
 print("my webserver is running...")
 httpd.serve_forever()
-```
 
+```
 ## OUTPUT:
-![image](https://github.com/ibrahimfedahs/simplewebserver/assets/150319493/e2fa4c95-0c4c-414a-ba08-6da6cb2cdc06)
-![image-1](https://github.com/ibrahimfedahs/simplewebserver/assets/150319493/5295123a-5fda-4583-9860-794e2354eb7e)
+![Screenshot 2023-11-07 170035](https://github.com/Gokkul-M/simplewebserver/assets/144870543/8d5cf588-d682-45e6-8a29-93aedf822118)
+![Screenshot 2023-11-07 170124](https://github.com/Gokkul-M/simplewebserver/assets/144870543/89518073-343a-47d0-b957-5a6a13e5d910)
 
 
 ## RESULT:
